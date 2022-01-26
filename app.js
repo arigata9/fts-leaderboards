@@ -1,3 +1,5 @@
+'use-strict';
+
 const express = require('express');
 const config = require('./config.json');
 const app = express();
@@ -13,4 +15,4 @@ app.use('/', routes);
 // starting server
 app.listen(config.port, config.address, () => {
     console.log(`Listening on ${config.address} port ${config.port}`);
-})
+});

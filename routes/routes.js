@@ -3,12 +3,8 @@ const router = express.Router();
 
 // root
 router.get('/', (req, res) => {
-    res.send('Home.');
+    res.render('index');
 });
 
-// about
-router.get('/about', (req, res) => {
-    res.send('About.');
-});
 
 module.exports = router;
