@@ -1,0 +1,23 @@
+{
+  "name": "fts-leaderboards",
+  "version": "1.0.0",
+  "description": "Homepage for FTS FiveM Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arigata9/fts-leaderboards.git"
+  },
+  "author": "arigata9",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/arigata9/fts-leaderboards/issues"
+  },
+  "homepage": "https://github.com/arigata9/fts-leaderboards#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
