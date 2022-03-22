@@ -1,0 +1,14 @@
+{
+  "en": {
+      "welcome": "Welcome",
+      "welcomesubheadline": "... to Fujiwara Tofu Shop, the home of touge racing in FiveM. We are a community dedicated to grip racing on Inital D inspired touge tracks.",
+      "Leaderboards": "Leaderboards",
+      "learnmore": "Learn more"
+  },
+  "ru": {
+      "welcome": "Добро пожаловать",
+      "welcomesubheadline": "... на Fujiwara Tofu Shop, обитель touge-гонок в FiveM. Мы представляем собой сообщество посвященное гонкам на горных дорогах.",
+      "Leaderboards": "Таблицы лидеров",
+      "learnmore": "Узнать больше"
+  }
+}
