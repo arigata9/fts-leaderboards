@@ -1,14 +1,26 @@
 {
   "en": {
-      "welcome": "Welcome",
-      "welcomesubheadline": "... to Fujiwara Tofu Shop, the home of touge racing in FiveM. We are a community dedicated to grip racing on Inital D inspired touge tracks.",
-      "Leaderboards": "Leaderboards",
-      "learnmore": "Learn more"
+    "welcome": "Welcome",
+    "welcomesubheadline": "... to Fujiwara Tofu Shop, the home of touge racing in FiveM. We are a community dedicated to grip racing on Inital D inspired touge tracks.",
+    "Leaderboards": "Leaderboards",
+    "learnmore": "Learn more",
+    "sliderleft": "Timetrials",
+    "sliderright": "Custom Races",
+    "link1": "Link 1",
+    "link2": "Link 2",
+    "aboutserver": "About the server",
+    "abouttext": "Our GTA 5 FiveM server is based on the famous anime \"Initial D\". Here you will find over 50 models of real JDM <br>and other cars, famous touge tracks (like Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki and others), some drift maps, <br>an unforgettable experience and of course a friendly and fast growing community!"
   },
   "ru": {
-      "welcome": "Добро пожаловать",
-      "welcomesubheadline": "... на Fujiwara Tofu Shop, обитель touge-гонок в FiveM. Мы представляем собой сообщество посвященное гонкам на горных дорогах.",
-      "Leaderboards": "Таблицы лидеров",
-      "learnmore": "Узнать больше"
+    "welcome": "Добро пожаловать",
+    "welcomesubheadline": "... на Fujiwara Tofu Shop, обитель touge-гонок в FiveM. Мы представляем собой сообщество посвященное гонкам на горных дорогах.",
+    "Leaderboards": "Таблицы лидеров",
+    "learnmore": "Узнать больше",
+    "sliderleft": "Заезды на время",
+    "sliderright": "Пользовательские гонки",
+    "link1": "Ссылка 1",
+    "link2": "Ссылка 2",
+    "aboutserver": "О сервере",
+    "abouttext": "Наш сервер GTA 5 FiveM сделан по мотивам известного аниме \"Initial D\", у нас вы найдете 50+ реальных моделей машин,<br> известные горные трассы (Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki и другие), незабываемый опыт гонок по горным дорогам и, <br>конечно же, дружелюбное быстрорастущее коммьюнити!"
   }
 }
