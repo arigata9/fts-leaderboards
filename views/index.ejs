@@ -26,7 +26,13 @@
         <!-- First diagonal content box -->
         <div class="diagonal-content">
         <h2 class="display-2 text-white fade show">
-            <%= ru.welcome %>
+            <!-- Welcome -->
+            <% if (en) { %>
+                <%= en.welcome %>
+            <% } %>
+            <% if (ru) { %>
+                <%= ru.welcome %>
+            <% } %>
         </h2>
         <p class="lead text-white">
             ... to Fujiwara Tofu Shop, the home of touge racing in FiveM. 

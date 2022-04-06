@@ -5,7 +5,12 @@ const locales = require('./../locales.json');
 // root
 router.get('/', (req, res) => {
     res.render('index', {
-        en: locales.en,
+        en: locales.en
+    });
+});
+
+router.get('/ru', (req, res) => {
+    res.render('index', {
         ru: locales.ru
     });
 });
