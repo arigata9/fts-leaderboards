@@ -141,6 +141,7 @@ html {
    position: fixed;
    bottom: 14px;
    right: 18px;
+   z-index: 2147483641;
  }
 
  .locale-button .locale-button-style {
