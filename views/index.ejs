@@ -27,10 +27,10 @@
         <div class="diagonal-content">
         <h2 class="display-2 text-white fade show">
             <!-- Welcome -->
-            <% if (!typeof en == 'undefined') { %>
+            <% if (typeof en !== 'undefined') { %>
                 <%= en.welcome %>
             <% } %>
-            <% if (!typeof ru == 'undefined') { %>
+            <% if (typeof ru !== 'undefined') { %>
                 <%= ru.welcome %>
             <% } %>
         </h2>
