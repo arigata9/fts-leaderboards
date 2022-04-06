@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const locales = require('./locales.json');
+const locales = require('./../locales.json');
 
 // root
 router.get('/', (req, res) => {
