@@ -40,12 +40,26 @@
             <% } %>
         </h2>
         <p class="lead text-white">
-            ... to Fujiwara Tofu Shop, the home of touge racing in FiveM. 
-            We are a community dedicated to grip racing on Inital D inspired touge tracks.
+            <% if (typeof en !== 'undefined') { %>
+                <%= en.welcomesubheadline %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.welcomesubheadline %>
+            <% } %>
         </p>
         <p>
-            <a href="#leaderboards" class="btn btn-lg btn-outline-light fw-bold border-black text-white">Leaderboards</a>
-            <a href="#about" class="btn btn-lg btn-outline-light fw-bold border-black text-white">Learn more</a>
+            <a href="#leaderboards" class="btn btn-lg btn-outline-light fw-bold border-black text-white"><% if (typeof en !== 'undefined') { %>
+                <%= en.Leaderboards %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.Leaderboards %>
+            <% } %></a>
+            <a href="#about" class="btn btn-lg btn-outline-light fw-bold border-black text-white"><% if (typeof en !== 'undefined') { %>
+                <%= en.learnmore %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.learnmore %>
+            <% } %></a>
         </p>
         </div>
     
@@ -55,14 +69,29 @@
     <div class="diagonal-box background-one">
         <div class="diagonal-content text-center">
         <h2 class="display-2 text-white" id="leaderboards">
-            Leaderboards
+            <% if (typeof en !== 'undefined') { %>
+                <%= en.Leaderboards %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.Leaderboards %>
+            <% } %>
         </h2>
     
         <div class="card w-50 m-auto">
             <div class="card-body">
             <div class="button-group w-50 m-auto" data-left="4px">
-                <button onClick="buttonClick('4px')">Timetrials</button>
-                <button onClick="buttonClick('50%')">Custom Races</button>
+                <button onClick="buttonClick('4px')"><% if (typeof en !== 'undefined') { %>
+                    <%= en.sliderleft %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.sliderleft %>
+                <% } %></button>
+                <button onClick="buttonClick('50%')"><% if (typeof en !== 'undefined') { %>
+                    <%= en.sliderright %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.sliderright %>
+                <% } %></button>
             </div>
             </div>
             <ul class="list-group list-group-flush">
@@ -105,8 +134,18 @@
             </ul>
     
             <div class="card-footer">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="#" class="card-link"><% if (typeof en !== 'undefined') { %>
+                <%= en.link1 %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.link1 %>
+            <% } %></a>
+            <a href="#" class="card-link"><% if (typeof en !== 'undefined') { %>
+                <%= en.link2 %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.link2 %>
+            <% } %></a>
             </div>
     
         </div> <!-- Card end -->
@@ -117,11 +156,21 @@
     <div class="diagonal-box background-two">
         <div class="diagonal-content text-center text-white">
         <h2 class="display-2" id="about">
-            About the server
+            <% if (typeof en !== 'undefined') { %>
+                <%= en.aboutserver %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.aboutserver %>
+            <% } %>
         </h2>
     
         <p class="lead">
-            Our GTA 5 FiveM server is based on the famous anime "Initial D". Here you will find over 50 models of real JDM <br>and other cars, famous touge tracks (like Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki and others), some drift maps, <br>an unforgettable experience and of course a friendly and fast growing community!
+            <% if (typeof en !== 'undefined') { %>
+                <%= en.abouttext %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.abouttext %>
+            <% } %>
         </p>
         </div>
     </div>
