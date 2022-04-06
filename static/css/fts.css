@@ -33,7 +33,7 @@ html {
  */
 @media screen and (min-width: 2421px) {
   :root {
-    --credits-margin: 11em;
+    --credits-margin: 13em;
   }
 }
 
