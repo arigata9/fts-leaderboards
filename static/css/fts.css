@@ -90,7 +90,7 @@ html {
  * "hero" background image
  */
  .hero-image {
-    background-image: url("img/wow.png");
+    background-image: url("../img/wow.png");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
