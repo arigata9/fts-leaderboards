@@ -132,3 +132,33 @@ html {
 .credits-box .credits-box-inner {
   margin-top: var(--credits-margin);
 }
+
+/*****************************************
+ * Localization button
+ *****************************************/
+
+ .locale-button {
+   position: fixed;
+   bottom: 14px;
+   right: 18px;
+ }
+
+ .locale-button .locale-button-style {
+   width: 50px;
+   height: 50px;
+   background-color: #5f9ea0;
+   border-radius: 50%;
+   box-shadow: 0 6px 10px 0 #666;
+
+   font-size: 50px;
+   line-height: 52px;
+   color: white;
+   text-align: center;
+
+   transition: all 0.1 ease-in-out;
+ }
+
+ .locale-button .locale-button-style:hover {
+   box-shadow: 0 6px 14px 0 #666;
+   transform: scale(1.05);
+ }
