@@ -16,7 +16,15 @@
 
     <!-- localization -->
     <div class="locale-button">
-        <div class="locale-button-style">&#x1F1F7;&#x1F1FA;</div>
+        <div class="locale-button-style">
+            <% if (typeof en !== 'undefined') { %>
+                <a href="/ru"><%= en.toggleLocaleEmote %></a>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <a href="/"><%= ru.toggleLocaleEmote %></a>
+            <% } %>
+        </div>
+        
     </div>
 
     <!-- Server Name Head Line -->
@@ -171,6 +179,7 @@
             <% if (typeof ru !== 'undefined') { %>
                 <%- ru.abouttext %>
             <% } %>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Sdf_0YuX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
         </div>
     </div>
@@ -194,7 +203,6 @@
         const buttonClick = (value) => {
             setButtonLeftAttr(value);
         };
-        //# sourceURL=pen.js
     </script>
   
 </body>

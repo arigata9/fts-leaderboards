@@ -9,7 +9,8 @@
     "link1": "Link 1",
     "link2": "Link 2",
     "aboutserver": "About the server",
-    "abouttext": "Our GTA 5 FiveM server is based on the famous anime \"Initial D\". Here you will find over 50 models of real JDM <br>and other cars, famous touge tracks (like Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki and others), some drift maps, <br>an unforgettable experience and of course a friendly and fast growing community!"
+    "abouttext": "Our GTA 5 FiveM server is based on the famous anime \"Initial D\". Here you will find over 50 models of real JDM <br>and other cars, famous touge tracks (like Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki and others), some drift maps, <br>an unforgettable experience and of course a friendly and fast growing community!<br><br>Still unsure? Here's a little teaser, to get you in the mood:<br>",
+    "toggleLocaleEmote": "&#x1F1F7;&#x1F1FA;"
   },
   "ru": {
     "welcome": "Добро пожаловать",
@@ -21,6 +22,7 @@
     "link1": "Ссылка 1",
     "link2": "Ссылка 2",
     "aboutserver": "О сервере",
-    "abouttext": "Наш сервер GTA 5 FiveM сделан по мотивам известного аниме \"Initial D\", у нас вы найдете 50+ реальных моделей машин,<br> известные горные трассы (Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki и другие), незабываемый опыт гонок по горным дорогам и, <br>конечно же, дружелюбное быстрорастущее коммьюнити!"
+    "abouttext": "Наш сервер GTA 5 FiveM сделан по мотивам известного аниме \"Initial D\", у нас вы найдете 50+ реальных моделей машин,<br> известные горные трассы (Akina, Irohazaka, Usui, Tsuchisaka, Akagi, Myogi, Tsubaki и другие), незабываемый опыт гонок по горным дорогам и, <br>конечно же, дружелюбное быстрорастущее коммьюнити!<br><br>До сих пор сомневаешься? Вот небольшой тизер, который точно тебя убедит:<br>",
+    "toggleLocaleEmote": "&#x1F1FA;&#x1F1F8;"
   }
 }
