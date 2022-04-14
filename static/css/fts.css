@@ -25,6 +25,13 @@
 
 html {
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 
