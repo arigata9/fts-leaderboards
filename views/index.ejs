@@ -18,10 +18,10 @@
     <div class="locale-button">
         <div class="locale-button-style">
             <% if (typeof en !== 'undefined') { %>
-                <a href="/ru"><%= en.toggleLocaleEmote %></a>
+                <a href="/ru"><%- en.toggleLocaleEmote %></a>
             <% } %>
             <% if (typeof ru !== 'undefined') { %>
-                <a href="/"><%= ru.toggleLocaleEmote %></a>
+                <a href="/"><%- ru.toggleLocaleEmote %></a>
             <% } %>
         </div>
         
