@@ -23,6 +23,14 @@ const maps = con.execute(mapsSQL, (err, result, fields) => {
     return result;
 });
 
+console.log(maps);
+var test = maps[0].track_name;
+console.log('array test: '+test);
+var test2 = Object.keys(maps).forEach(thing => {
+    console.log('working: '+thing);
+});
+console.log('after test2: '+test2);
+
 // root
 router.get('/', (req, res) => {
     res.render('index', {
