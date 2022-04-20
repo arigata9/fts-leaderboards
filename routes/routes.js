@@ -17,27 +17,21 @@ con.connect((err) => {
     console.log('Database connection established.');
 });
 
-const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
-let tracks;
-con.query(mapsSQL, (err, result, fields) => {
-    if(err) throw err;
-    if(result.length == 0) return 'No maps found';
-
-    Object.keys(result).forEach(key => {
-        var row = result[key];
-        console.log('working on it: '+row.track_name);
-    });
-
-    result.forEach((row) => {
-        console.log('still workin: '+row.track_name);
-    });
-});
-
 // root
 router.get('/', (req, res) => {
-    res.render('index', {
-        en: locales.en,
-        tracks: maps
+    const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
+    con.query(mapsSQL, (err, result, fields) => {
+        if(err) throw err;
+        if(result.length == 0) return 'No maps found';
+
+        /* result.forEach((row) => {
+            console.log('still workin: '+row.track_name);
+        }); */
+
+        res.render('index', {
+            en: locales.en,
+            tracks: result
+        });
     });
 });
 
