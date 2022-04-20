@@ -84,7 +84,24 @@
                 <%= ru.Leaderboards %>
             <% } %>
         </h2>
-    
+
+        <div class="card w-60 m-auto">
+            <div class="card-header">
+                Choose a map...
+            </div>
+            <div class="card-body">
+                <p class="card-text">Text here.</p>
+                <form action="/post/timetrials" method="post">
+                    <label for="maps">Choose a map:</label>
+                    <select id="maps" name="maps">
+                        <% tracks.forEach(track => { %>
+                            <option><%= track.track_name</option>
+                        <% }); %>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <br>
         <div class="card w-50 m-auto">
             <div class="card-body">
             <div class="button-group w-50 m-auto" data-left="4px">

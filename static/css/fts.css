@@ -162,6 +162,7 @@ html::-webkit-scrollbar {
    line-height: 50px;
    color: white;
    text-align: center;
+   text-decoration: none;
 
    transition: all 0.1 ease-in-out;
  }
