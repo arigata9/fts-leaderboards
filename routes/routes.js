@@ -23,12 +23,14 @@ con.query(mapsSQL, (err, result, fields) => {
     if(err) throw err;
     if(result.length == 0) return 'No maps found';
 
-    tracks = result;
-});
+    Object.keys(result).forEach(key => {
+        var row = result[key];
+        console.log('working on it: '+row.track_name);
+    });
 
-Object.keys(tracks).forEach(key => {
-    var row = tracks[key];
-    console.log('working on it: '+row.track_name);
+    result.forEach((row) => {
+        console.log('still workin: '+row.track_name);
+    });
 });
 
 // root
