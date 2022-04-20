@@ -95,7 +95,7 @@
                     <label for="maps">Choose a map:</label>
                     <select id="maps" name="maps">
                         <% tracks.forEach(track => { %>
-                            <option value="<%= tracks.track_id %>"><%= tracks.track_name %></option>
+                            <option value="<%= track.track_id %>"><%= track.track_name %></option>
                         <% }); %>
                     </select>
                 </form>
