@@ -26,10 +26,11 @@ const maps = con.execute(mapsSQL, (err, result, fields) => {
 console.log(maps);
 var test = maps[0].track_name;
 console.log('array test: '+test);
-var test2 = Object.keys(maps).forEach(thing => {
-    console.log('working: '+thing);
+var test2 = Object.keys(maps).forEach(key => {
+    var row = maps[key];
+    console.log('working on it: '+row.track_name);
 });
-console.log('after test2: '+test2);
+//console.log('after test2: '+test2);
 
 // root
 router.get('/', (req, res) => {
