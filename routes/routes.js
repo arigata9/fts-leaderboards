@@ -24,10 +24,6 @@ router.get('/', (req, res) => {
         if(err) throw err;
         if(result.length == 0) return 'No maps found';
 
-        /* result.forEach((row) => {
-            console.log('still workin: '+row.track_name);
-        }); */
-
         res.render('index', {
             en: locales.en,
             tracks: result
@@ -36,10 +32,21 @@ router.get('/', (req, res) => {
 });
 
 router.get('/ru', (req, res) => {
-    res.render('index', {
-        ru: locales.ru,
-        tracks: maps
+    const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
+    con.query(mapsSQL, (err, result, fields) => {
+        if(err) throw err;
+        if(result.length == 0) return 'No maps found';
+
+        res.render('index', {
+            ru: locales.ru,
+            tracks: result
+        });
     });
+});
+
+router.post('/post/timetrials', (req, res) => {
+    console.log('hey, a body: '+req.body);
+    
 });
 
 
