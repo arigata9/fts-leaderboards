@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mysql = require('mysql2');
 const router = express.Router();
@@ -16,21 +18,26 @@ con.connect((err) => {
 });
 
 const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
-let maps = con.execute(mapsSQL, (err, result, fields) => {
+let maps = con.query(mapsSQL, (err, result, fields) => {
     if(err) throw err;
     if(result.length == 0) return 'No maps found';
+
+    Object.keys(result).forEach(key => {
+        var row = result[key];
+        console.log('working on it: '+row.track_name);
+    });
 
     return result;
 });
 
-console.log(maps);
+/* console.log(maps);
 var test = maps[0].track_name;
 console.log('array test: '+test);
 var test2 = Object.keys(maps).forEach(key => {
     var row = maps[key];
     console.log('working on it: '+row.track_name);
 });
-//console.log('after test2: '+test2);
+ *///console.log('after test2: '+test2);
 
 // root
 router.get('/', (req, res) => {
