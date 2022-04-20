@@ -15,7 +15,7 @@ con.connect((err) => {
     console.log('Database connection established.');
 });
 
-const mapsSQL = 'SELECT track_name FROM tracks;';
+const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 const maps = con.query(mapsSQL, (err, result, fields) => {
     if(err) throw err;
     if(result.length == 0) return 'No maps found';
