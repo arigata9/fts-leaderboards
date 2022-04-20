@@ -16,7 +16,7 @@ con.connect((err) => {
 });
 
 const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
-const maps = con.query(mapsSQL, (err, result, fields) => {
+const maps = con.execute(mapsSQL, (err, result, fields) => {
     if(err) throw err;
     if(result.length == 0) return 'No maps found';
 
