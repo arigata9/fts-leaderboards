@@ -91,16 +91,17 @@
             </div>
             <div class="card-body">
                 <p class="card-text">Choose a track to display the leaderboard for it</p>
-                <form action="/tracks/" method="get">
-                    <label for="maps">Choose:</label>
-                    <select class="form-select" id="maps" name="maps">
-                        <% tracks.forEach(track => { %>
-                            <option value="<%= track.track_id %>"><%= track.track_name %></option>
-                        <% }); %>
-                    </select>
-                    <br>
-                    <input class="btn btn-primary" type="submit" value="Open">
-                </form>
+                <!-- <form action="/tracks/" method="get">
+                    
+                </form> -->
+                <label for="maps">Choose:</label>
+                <select class="form-select" id="trackselector" name="trackid">
+                    <% tracks.forEach(track => { %>
+                        <option value="<%= track.track_id %>"><%= track.track_name %></option>
+                    <% }); %>
+                </select>
+                <br>
+                <input class="btn btn-primary" value="Open" onclick="openLeaderboard()">
             </div>
         </div>
         <br>
@@ -222,6 +223,16 @@
         const buttonClick = (value) => {
             setButtonLeftAttr(value);
         };
+
+        // openLeaderboard function
+        function openLeaderboard() {
+            //todo
+            const trackselector = document.getElementById("trackselector");
+            const track_id = trackselector.value;
+
+            return window.open(`/tracks/${track_id}`);
+        }
+
     </script>
   
 </body>
