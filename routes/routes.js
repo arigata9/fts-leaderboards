@@ -58,10 +58,18 @@ router.post('/post/timetrials', (req, res) => {
 
 router.get('/tracks/:trackid', (req, res) => {
     var trackid = req.params.trackid;
-    console.log('GET: requested trackid: '+trackid);
+    console.log('GET /tracks: requested trackid: '+trackid);
 
-    res.send('yep gotcha');
-    return res.statusCode = 200;
+    const scoreSQL = `SELECT score, vehicle_name FROM Records WHERE track_id = ${trackid}`;
+    con.query(scoreSQL, (err, result, fields) => {
+        if(err) throw err;
+        if(result.length == 0) return 'No scores found';
+
+        res.render('leaderboard', {
+            scores: result
+        });
+    });
+    
 });
 
 
