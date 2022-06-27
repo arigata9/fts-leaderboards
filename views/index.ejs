@@ -85,19 +85,20 @@
             <% } %>
         </h2>
 
-        <div class="card w-60 m-auto">
+        <div class="card w-40 m-auto">
             <div class="card-header">
                 Track selector
             </div>
             <div class="card-body">
                 <p class="card-text">Choose a track to display the leaderboard for it</p>
-                <form action="/post/timetrials" method="post">
+                <form action="/tracks/" method="get">
                     <label for="maps">Choose:</label>
                     <select class="form-select" id="maps" name="maps">
                         <% tracks.forEach(track => { %>
                             <option value="<%= track.track_id %>"><%= track.track_name %></option>
                         <% }); %>
                     </select>
+                    <br>
                     <input class="btn btn-primary" type="submit" value="Open">
                 </form>
             </div>

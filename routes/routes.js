@@ -51,9 +51,17 @@ router.post('/post/timetrials', (req, res) => {
         if(err) throw err;
         if(result.length == 0) return 'No scores found';
 
-        res.json(result);
         res.sendStatus(200);
+        res.json(result);
     });
+});
+
+router.get('/tracks/:trackid', (req, res) => {
+    var trackid = req.params.trackid;
+    console.log('GET: requested trackid: '+trackid);
+
+    res.send('yep gotcha');
+    return res.statusCode = 200;
 });
 
 
