@@ -148,12 +148,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% scores.forEach(score => { %>
+                    <% Object.keys(scores).forEach(score => { %>
                         <tr>
                             <td>1</td>
                             <td>Sexy monke</td>
-                            <td><%= scores.vehicle_name %></td>
-                            <td><%= scores.score %></td>
+                            <td><%= scores[score].vehicle_name %></td>
+                            <td><%= scores[score].score %></td>
                         </tr>
                     <% }); %>
                 </tbody>
