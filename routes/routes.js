@@ -63,10 +63,10 @@ router.get('/tracks/:trackid', (req, res) => {
     const scoreSQL = `SELECT score, vehicle_name FROM Records WHERE track_id = ${trackid}`;
     con.query(scoreSQL, (err, result, fields) => {
         if(err) throw err;
-        if(result.length == 0) return 'No scores found';
+        if(result.length == 0) console.log('No scores found');
 
         res.render('leaderboard', {
-            scores: result
+            scores: result[0]
         });
     });
     
