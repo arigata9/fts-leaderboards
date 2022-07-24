@@ -65,10 +65,10 @@ router.get('/tracks/:trackid', (req, res) => {
         if(err) throw err;
         if(result.length == 0) console.log('No scores found');
         
-        console.log(`result row 0: ${result[0]}`)
+        console.log(`result row 0: ${Object.entries(result)}`)
 
         res.render('leaderboard', {
-            scores: result[0]
+            scores: result
         });
     });
     
