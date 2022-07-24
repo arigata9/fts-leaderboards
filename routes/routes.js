@@ -66,9 +66,17 @@ router.get('/tracks/:trackid', (req, res) => {
         if(result.length == 0) console.log('No scores found');
         
         console.log(`result row: ${Object.entries(result)}`);
-        console.log(`result iterated: ${Object.keys(result).forEach(key => {
-            console.log(`key: ${key}, value: ${result[key]}`);
-        })}`);
+                const iterate = (obj) => {
+            Object.keys(obj).forEach(key => {
+        
+            console.log(`key: ${key}, value: ${obj[key]}`)
+        
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    iterate(obj[key])
+                }
+            })
+        }
+        console.log(iterate(result));
 
         res.render('leaderboard', {
             scores: result
