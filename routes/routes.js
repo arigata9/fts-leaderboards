@@ -64,6 +64,8 @@ router.get('/tracks/:trackid', (req, res) => {
     con.query(scoreSQL, (err, result, fields) => {
         if(err) throw err;
         if(result.length == 0) console.log('No scores found');
+        
+        console.log(`result row 0: ${result[0]}`)
 
         res.render('leaderboard', {
             scores: result[0]
