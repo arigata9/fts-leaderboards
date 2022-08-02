@@ -130,6 +130,9 @@ html::-webkit-scrollbar {
 .background-three {
   background-image: linear-gradient(-135deg, #0cc, #066);
 }
+.background-four {
+  background-image: linear-gradient(45deg, #ffe53b, #00ffff);
+}
 .fts-logo {
   width: var(--logo-width);
 }
