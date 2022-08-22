@@ -68,6 +68,7 @@
             <% if (typeof ru !== 'undefined') { %>
                 <%= ru.learnmore %>
             <% } %></a>
+            <a href="#faq" class="btn btn-lg btn-outline-light fw-bold border-black text-white">FAQ</a>
         </p>
         </div>
     
@@ -91,9 +92,6 @@
             </div>
             <div class="card-body">
                 <p class="card-text">Choose a track to display the leaderboard for it</p>
-                <!-- <form action="/tracks/" method="get">
-                    
-                </form> -->
                 <label for="maps">Choose:</label>
                 <select class="form-select" id="trackselector" name="trackid">
                     <% tracks.forEach(track => { %>
@@ -104,79 +102,6 @@
                 <input class="btn btn-primary" value="Open" onclick="openLeaderboard()">
             </div>
         </div>
-        <br>
-        <div class="card w-50 m-auto">
-            <div class="card-body">
-            <div class="button-group w-50 m-auto" data-left="4px">
-                <button onClick="buttonClick('4px')"><% if (typeof en !== 'undefined') { %>
-                    <%= en.sliderleft %>
-                <% } %>
-                <% if (typeof ru !== 'undefined') { %>
-                    <%= ru.sliderleft %>
-                <% } %></button>
-                <button onClick="buttonClick('50%')"><% if (typeof en !== 'undefined') { %>
-                    <%= en.sliderright %>
-                <% } %>
-                <% if (typeof ru !== 'undefined') { %>
-                    <%= ru.sliderright %>
-                <% } %></button>
-            </div>
-            </div>
-            <ul class="list-group list-group-flush">
-            <div class="score-card">
-                <li class="list-group-item">
-                <div class="leader">
-                    <div class="user">
-                    <div class="number">1</div>
-                    <div class="user-pic"></div>
-                    </div>
-                    <div class="user-info">
-                    <div class="user-name">sexy monke man</div>
-                    <div class="view-count">3:42:314</div>
-                    </div>
-                    <div class="cols">
-                    <p class="cols-item">Honda NSX Type R</p>
-                    <p class="cols-item">AkinaD Downhill</p>
-                    <p class="cols-item">23.01.2022</p>
-                    </div>
-                </div>
-                </li>
-                <li class="list-group-item">
-                <div class="leader">
-                    <div class="user">
-                    <div class="number">2</div>
-                    <div class="user-pic"></div>
-                    </div>
-                    <div class="user-info">
-                    <div class="user-name">horny niklas guy</div>
-                    <div class="view-count">4:16:805</div>
-                    </div>
-                    <div class="cols">
-                    <p class="cols-item">Nissan Skyline R34</p>
-                    <p class="cols-item">AkinaD Downhill</p>
-                    <p class="cols-item">23.01.2022</p>
-                    </div>
-                </div>
-                </li>
-            </div>
-            </ul>
-    
-            <div class="card-footer">
-            <a href="#" class="card-link"><% if (typeof en !== 'undefined') { %>
-                <%= en.link1 %>
-            <% } %>
-            <% if (typeof ru !== 'undefined') { %>
-                <%= ru.link1 %>
-            <% } %></a>
-            <a href="#" class="card-link"><% if (typeof en !== 'undefined') { %>
-                <%= en.link2 %>
-            <% } %>
-            <% if (typeof ru !== 'undefined') { %>
-                <%= ru.link2 %>
-            <% } %></a>
-            </div>
-    
-        </div> <!-- Card end -->
         </div>
     </div>
     
@@ -204,9 +129,10 @@
         </div>
     </div>
 
+    <!-- Fourth diagonal box -->
     <div class="diagonal-box background-four">
         <div class="diagonal-content text-center text-white">
-            <h2 class="display-2">Frequently Asked Questions</h2>
+            <h2 class="display-2" id="faq">Frequently Asked Questions</h2>
             <p class="lead">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
