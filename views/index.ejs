@@ -86,7 +86,7 @@
             <% } %>
         </h2>
 
-        <div class="card w-40 m-auto">
+        <div class="card w-25 m-auto">
             <div class="card-header">
                 Track selector
             </div>
@@ -132,7 +132,14 @@
     <!-- Fourth diagonal box -->
     <div class="diagonal-box background-four">
         <div class="diagonal-content text-center text-white">
-            <h2 class="display-2" id="faq">Frequently Asked Questions</h2>
+            <h2 class="display-2" id="faq">
+                <% if (typeof en !== 'undefined') { %>
+                    <%- en.faqheading %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%- ru.faqheading %>
+                <% } %>
+            </h2>
             <p class="lead">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
