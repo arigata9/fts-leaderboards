@@ -14,6 +14,29 @@
         </div>
     </div>
 
+    <div class="toast-container position-absolute p-3 top-0 start-0">
+        <div class="toast" id="creditToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Special thanks</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Special thanks goes to<br>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>tishio</strong><br>
+                        Sick developer, translator and owner of Fujiwara Tofu Shop
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Niklas</strong>
+                        Ideas, valuable input
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- localization -->
     <div class="locale-button">
         <div class="locale-button-style">
@@ -184,13 +207,12 @@
     <div class="credits-box">
         <div class="p-2 text-white credits-box-inner">
         <p>
-            Made with &#x2615; by arigata9 / 0xygen
+            <a href="" class="text-decoration-none" id="toastTrigger">Made with &#x2615; by arigata9 / 0xygen</a>
         </p>
         </div>
     </div>
     
     <!-- Javascript stuff going on here... -->
-
     <script>
         // openLeaderboard function
         function openLeaderboard() {
@@ -200,6 +222,19 @@
 
             return window.open(`/tracks/${track_id}`);
         }
+    </script>
+
+    <script>
+        var toastTrigger = document.getElementById('toastTrigger')
+        var toastLiveExample = document.getElementById('creditToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', function () {
+                var toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+
     </script>
   
 </body>
