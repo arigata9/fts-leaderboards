@@ -161,5 +161,25 @@
         </section>
     </div>
 
+    <!-- Search Javascript -->
+
+    <script>
+        $("#search-leaderboard").keyup(function() {
+            var value = this.value;
+
+            $("table").find("tr").each(function(index) {
+                if (index === 0) return;
+
+                var if_td_has = false;
+                $(this).find('td').each(function () {
+                    if_td_has = if_td_has || $(this).text().indexOf(value) !== -1; //Check if td's text matches key and then use OR to check it for all td's
+                });
+
+                $(this).toggle(if_td_has);
+
+            });
+        });
+    </script>
+
 </body>
 </html>
