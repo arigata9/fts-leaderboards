@@ -17,7 +17,23 @@
     "q2": "Why does it take so long to load in?",
     "a2": "Download speed depends on your ping, network bandwidth etc., there's not much we can do about it.",
     "q3": "Why is the handling of car 'X' is messed up?",
-    "a3": "Our team is testing and working on it constantly to improve handling as much as we can. It takes time and in the current circumstances everyone is putting in as much effort as he can to reach the goal of our unique handling."
+    "a3": "Our team is testing and working on it constantly to improve handling as much as we can. It takes time and in the current circumstances everyone is putting in as much effort as he can to reach the goal of our unique handling.",
+    "q4": "Why do the leaderboards get reset so often?",
+    "a4": "That happens due to regular handling updates and bugfixes, resets will be less often as soon as we get all the things done.",
+    "q5": "Why do the lamp posts fall over?",
+    "a5": "That's a bug that comes with the map, if u see a moderator/admin/owner online ask him to fix that by clearing area. The server team has learned how to deal with this and will help you if they able to. In the current state we don't see a long term solution for this problem yet.",
+    "q6": "Why is no one following the “left lane only” rule?",
+    "a6": "The Community of this server likes touge races. While doing these kinds of races, taking the best possible line is needed to go fast. Best possible lines consist of using the whole track. We suggest using <b>/passivetoggle</b> or [<b>F9</b>] when driving around.",
+    "q7": "Why rammers don't get punished?",
+    "a7": "In the current state, it's very hard to tell if someone is intentionally crashing into you or not, desync gives us a hard time judging player behavior right. If you have 100% prove that someone is intentionally crashing into you, please send the video and details into the <a href=\"https://discord.com/channels/870834818919833600/875084154029621299\">#report</a> channel on discord.",
+    "q8": "How do I drift?",
+    "a8": "You should buy a car from Drift Tier. By the way, everyday we're working to improve handling of every car and you can become a part of this hard but fun process, use <a href=\"https://discord.com/channels/870834818919833600/876792643705798756\">#handling-feedback</a>.",
+    "q9": "How do I put addon rims?",
+    "a9": "Search in <b>Sports/Tuner</b> section for them",
+    "q10": "How do I record clips for Rockstar Editor?",
+    "a10": "F1 -> Recording Options",
+    "q11": "Is there steering wheel support?",
+    "a11": "No, unfortunately. There's a client script for vanila GTA 5 but client scripts cannot be allowed for security reasons. If wheel support server-sided script will pop up, we will surely let yall know."
   },
   "ru": {
     "welcome": "Добро пожаловать",
@@ -37,6 +53,22 @@
     "q2": "Почему я так долго загружаюсь на сервер?",
     "a2": "Скорость закачки зависит от твоего пинга, скорости интернета и тд. Это зависит не от нас.",
     "q3": "Почему у машины “вставить название машины” такой хреновый хэндлинг?",
-    "a3": "Наша команда постоянно тестирует и работает над этим, чтобы максимально улучшить хэндлинг. Это требует времени, и в нынешних обстоятельствах каждый прилагает все усилия, чтобы достичь цели нашего уникального хэндлинга."
+    "a3": "Наша команда постоянно тестирует и работает над этим, чтобы максимально улучшить хэндлинг. Это требует времени, и в нынешних обстоятельствах каждый прилагает все усилия, чтобы достичь цели нашего уникального хэндлинга.",
+    "q4": "Почему таблица лидеров сбрасывается?",
+    "a4": "Такое происходит после обновления хэндлинга и устранения багов, сбросы будут реже, как только мы доделаем все дела по серверу.",
+    "q5": "Почему падают фонарные столбы?",
+    "a5": "Этот баг связан с картой, если вы видите модератора/администратора/владельца онлайн, попросите его исправить это, очистив область. Команда сервера научилась с этим справляться и поможет вам, если сможет. На данный момент мы пока не видим долгосрочного решения этой проблемы.",
+    "q6": "Почему никто не держится левой полосы?",
+    "a6": "Сообщество этого сервера ориентированно на тоге. Во время тоге, нужно придерживаться лучшей траектории чтобы быть максимально быстрым. При самой лучшей траектории используется вся дорога. Мы решили использовать пассивный режим когда просто катаемся, его можно активировать нажав на F9 или написав в чате /passivetoggle",
+    "q7": "Почему раммеры остаются безнаказанными?",
+    "a7": "На данный момент очень трудно сказать специально ли в тебя врезались или нет, рассинхронизация мешает нам правильно оценивать поведение игроков. Если у вас есть 100% доказательство того, что кто-то намеренно врезается в вас, пожалуйста, пришлите видео и подробности в репорты",
+    "q8": "Как тут дрифтить?",
+    "a8": "Нужно купить машину дрифт класса. Кстати, каждый день мы работаем над улучшением управляемости каждого автомобиля, и вы можете стать частью этого непростого, но увлекательного процесса, написав в отзывы о хэндлинге",
+    "q9": "Где мне найти кастомные диски?",
+    "a9": "Ищи их в разделе <b>Sports/Tuner</b>",
+    "q10": "Как мне записать клипы для рокстар эдитор?",
+    "a10": "F1 -> Recording Options",
+    "q11": "Будет ли поддержка игровых рулей в будущем?",
+    "a11": "К сожалению нет. Есть клиентский скрипт для сюжетки GTA 5, но клиентские скрипты не могут быть на сервере по соображениям безопасности. Если появится скрипт для поддержки игровых рулей для сервера, мы обязательно сообщим вам об этом."
   }
 }
