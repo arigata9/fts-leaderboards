@@ -60,7 +60,7 @@ router.get('/tracks/:trackid', (req, res) => {
     var trackid = req.params.trackid;
     console.log('GET /tracks: requested trackid: '+trackid);
 
-    const scoreSQL = `SELECT score, vehicle_name FROM Records WHERE track_id = ${trackid}`;
+    const scoreSQL = `SELECT score, vehicle_name, user_name, track_rank FROM Records WHERE track_id = ${trackid} ORDER BY track_rank;`;
     con.query(scoreSQL, (err, result, fields) => {
         if(err) throw err;
         if(result.length == 0) console.log('No scores found');
