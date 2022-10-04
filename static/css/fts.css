@@ -144,7 +144,7 @@ html::-webkit-scrollbar {
 }
 
 h2 {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 /*****************************************
