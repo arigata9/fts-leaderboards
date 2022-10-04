@@ -146,10 +146,10 @@
                 </select>
                 <br>
                 <input class="btn btn-primary" value="<% if (typeof en !== 'undefined') { %>
-                    <%= en.Open %>
+                    <%- en.Open %>
                 <% } %>
                 <% if (typeof ru !== 'undefined') { %>
-                    <%= ru.Open %>
+                    <%- ru.Open %>
                 <% } %>" onclick="openLeaderboard()">
             </div>
         </div>
@@ -175,13 +175,13 @@
             <% if (typeof ru !== 'undefined') { %>
                 <%- ru.abouttext %>
             <% } %>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Sdf_0YuX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="60%" height="415" src="https://www.youtube.com/embed/0Sdf_0YuX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
             <% if (typeof en !== 'undefined') { %>
-                <%= en.wanttosupport %>
+                <%- en.wanttosupport %>
             <% } %>
             <% if (typeof ru !== 'undefined') { %>
-                <%= ru.wanttosupport %>
+                <%- ru.wanttosupport %>
             <% } %>
         </p>
         </div>
