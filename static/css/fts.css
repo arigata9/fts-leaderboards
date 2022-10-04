@@ -143,6 +143,10 @@ html::-webkit-scrollbar {
   margin-top: var(--credits-margin);
 }
 
+h2 {
+  font-weight: bold;
+}
+
 /*****************************************
  * Localization button
  *****************************************/
