@@ -17,7 +17,6 @@
     <div class="toast-container position-absolute p-3 top-0 start-0">
         <div class="toast" id="creditToast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-                <img src="..." class="rounded me-2" alt="...">
                 <strong class="me-auto">Special thanks</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -95,7 +94,12 @@
             <% if (typeof ru !== 'undefined') { %>
                 <%= ru.learnmore %>
             <% } %></a>
-            <a href="#faq" class="btn btn-lg btn-outline-light fw-bold border-black text-white">FAQ</a>
+            <a href="#faq" class="btn btn-lg btn-outline-light fw-bold border-black text-white"><% if (typeof en !== 'undefined') { %>
+                <%= en.FAQbutton %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.FAQbutton %>
+            <% } %></a>
         </p>
         </div>
     
@@ -106,27 +110,47 @@
         <div class="diagonal-content text-center">
         <h2 class="display-2 text-white" id="leaderboards">
             <% if (typeof en !== 'undefined') { %>
-                <%= en.Leaderboards %>
+                <%= en.leaderboardsHeading %>
             <% } %>
             <% if (typeof ru !== 'undefined') { %>
-                <%= ru.Leaderboards %>
+                <%= ru.leaderboardsHeading %>
             <% } %>
         </h2>
 
         <div class="card w-50 mx-auto">
             <div class="card-header">
-                Track selector
+                <% if (typeof en !== 'undefined') { %>
+                    <%= en.trackSelector %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.trackSelector %>
+                <% } %>
             </div>
             <div class="card-body">
-                <p class="card-text">Choose a track to display the leaderboard for it</p>
-                <label for="maps">Choose:</label>
+                <p class="card-text"><% if (typeof en !== 'undefined') { %>
+                    <%= en.selectorDescription %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.selectorDescription %>
+                <% } %></p>
+                <label for="maps"><% if (typeof en !== 'undefined') { %>
+                    <%= en.Choose %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.Choose %>
+                <% } %></label>
                 <select class="form-select" id="trackselector" name="trackid">
                     <% tracks.forEach(track => { %>
                         <option value="<%= track.track_id %>"><%= track.track_name %></option>
                     <% }); %>
                 </select>
                 <br>
-                <input class="btn btn-primary" value="Open" onclick="openLeaderboard()">
+                <input class="btn btn-primary" value="<% if (typeof en !== 'undefined') { %>
+                    <%= en.Open %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.Open %>
+                <% } %>" onclick="openLeaderboard()">
             </div>
         </div>
         </div>
@@ -153,8 +177,12 @@
             <% } %>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/0Sdf_0YuX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
-            Want to support the server? In return you get an ingame rank and a discord role. You also get access to exclusive shop cars and much more.<br>
-            For more information, check our <a href="https://boosty.to/fujiwaratofushop" target="_blank">boosty-page here</a>.
+            <% if (typeof en !== 'undefined') { %>
+                <%= en.wanttosupport %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.wanttosupport %>
+            <% } %>
         </p>
         </div>
     </div>
@@ -432,7 +460,6 @@
     <script>
         // openLeaderboard function
         function openLeaderboard() {
-            //todo
             const trackselector = document.getElementById("trackselector");
             const track_id = trackselector.value;
 
