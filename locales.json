@@ -36,7 +36,8 @@
     "q10": "How do I record clips for Rockstar Editor?",
     "a10": "F1 -> Recording Options",
     "q11": "Is there steering wheel support?",
-    "a11": "No, unfortunately. There's a client script for vanila GTA 5 but client scripts cannot be allowed for security reasons. If wheel support server-sided script will pop up, we will surely let yall know."
+    "a11": "No, unfortunately. There's a client script for vanila GTA 5 but client scripts cannot be allowed for security reasons. If wheel support server-sided script will pop up, we will surely let yall know.",
+    "socialmedia": "Social"
   },
   "ru": {
     "welcome": "Добро пожаловать",
@@ -75,6 +76,7 @@
     "q10": "Как мне записать клипы для рокстар эдитор?",
     "a10": "F1 -> Recording Options",
     "q11": "Будет ли поддержка игровых рулей в будущем?",
-    "a11": "К сожалению нет. Есть клиентский скрипт для сюжетки GTA 5, но клиентские скрипты не могут быть на сервере по соображениям безопасности. Если появится скрипт для поддержки игровых рулей для сервера, мы обязательно сообщим вам об этом."
+    "a11": "К сожалению нет. Есть клиентский скрипт для сюжетки GTA 5, но клиентские скрипты не могут быть на сервере по соображениям безопасности. Если появится скрипт для поддержки игровых рулей для сервера, мы обязательно сообщим вам об этом.",
+    "socialmedia": "Социальные сети"
   }
 }
