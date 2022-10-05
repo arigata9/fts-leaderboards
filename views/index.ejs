@@ -145,12 +145,12 @@
                     <% }); %>
                 </select>
                 <br>
-                <input class="btn btn-primary" value="<% if (typeof en !== 'undefined') { %>
+                <button class="btn btn-primary" type="button" onclick="openLeaderboard()"><% if (typeof en !== 'undefined') { %>
                     <%- en.Open %>
                 <% } %>
                 <% if (typeof ru !== 'undefined') { %>
                     <%- ru.Open %>
-                <% } %>" onclick="openLeaderboard()">
+                <% } %></button>
             </div>
         </div>
         </div>
@@ -176,7 +176,7 @@
                 <%- ru.abouttext %>
             <% } %>
             <iframe width="60%" height="415" src="https://www.youtube.com/embed/0Sdf_0YuX6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br>
+            <br><br>
             <% if (typeof en !== 'undefined') { %>
                 <%- en.wanttosupport %>
             <% } %>
