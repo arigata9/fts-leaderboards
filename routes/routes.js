@@ -44,18 +44,6 @@ router.get('/ru', (req, res) => {
     });
 });
 
-router.post('/post/timetrials', (req, res) => {
-    console.log('hey, a body: '+req.body);
-    const scoreSQL = `SELECT score, vehicle_name FROM Records WHERE track_id = ${req.body.maps}`;
-    con.query(scoreSQL, (err, result, fields) => {
-        if(err) throw err;
-        if(result.length == 0) return 'No scores found';
-
-        res.sendStatus(200);
-        res.json(result);
-    });
-});
-
 router.get('/tracks/:trackid', (req, res) => {
     var trackid = req.params.trackid;
     console.log('GET /tracks: requested trackid: '+trackid);
