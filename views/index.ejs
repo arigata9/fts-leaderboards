@@ -40,6 +40,30 @@
         </div>
     </div>
 
+    <!-- Changelog Modal -->
+    <div class="modal fade" id="ChangelogModal" tabindex="-1" aria-labelledby="ChangelogModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="ChangelogModalLabel"><% if (typeof en !== 'undefined') { %>
+                <%= en.Changelog %>
+            <% } %>
+            <% if (typeof ru !== 'undefined') { %>
+                <%= ru.Changelog %>
+            <% } %></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <!-- localization -->
     <div class="locale-button">
         <div class="locale-button-style">
@@ -100,6 +124,15 @@
             <% if (typeof ru !== 'undefined') { %>
                 <%= ru.FAQbutton %>
             <% } %></a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-lg btn-outline-light fw-bold border-black text-white" data-bs-toggle="modal" data-bs-target="#ChangelogModal">
+                <% if (typeof en !== 'undefined') { %>
+                    <%= en.Changelog %>
+                <% } %>
+                <% if (typeof ru !== 'undefined') { %>
+                    <%= ru.Changelog %>
+                <% } %>
+            </button>
         </p>
         </div>
     
