@@ -1,4 +1,6 @@
 require('dotenv').config();
+const { marked } = require('marked');
+const changelog = require('../static/txt/changelog.md');
 
 const express = require('express');
 const mysql = require('mysql2');
@@ -20,26 +22,34 @@ con.connect((err) => {
 // root
 router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
+
+    const htmlChangelog = marked.parse(changelog);
+
     con.query(mapsSQL, (err, result, fields) => {
         if(err) throw err;
         if(result.length == 0) return 'No maps found';
 
         res.render('index', {
             en: locales.en,
-            tracks: result
+            tracks: result,
+            changelog: htmlChangelog
         });
     });
 });
 
 router.get('/ru', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
+
+    const htmlChangelog = marked.parse(changelog);
+
     con.query(mapsSQL, (err, result, fields) => {
         if(err) throw err;
         if(result.length == 0) return 'No maps found';
 
         res.render('index', {
             ru: locales.ru,
-            tracks: result
+            tracks: result,
+            changelog: htmlChangelog
         });
     });
 });
