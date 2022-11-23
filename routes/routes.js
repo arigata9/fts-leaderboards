@@ -32,6 +32,7 @@ router.get('/', (req, res) => {
             console.log(err);
             process.exit(1);
         }
+        console.log(data);
         tempChangelog = data;
     });
 
