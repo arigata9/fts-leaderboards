@@ -3,17 +3,6 @@ const { marked } = require('marked');
 var fs = require('fs'),
     path = require('path');
 
-var changelog; // Variable, content will be read to
-
-// read the changelog file
-fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
-    if(err) {
-        console.log(err);
-        process.exit(1);
-    }
-    changelog = data;
-})
-
 const express = require('express');
 const mysql = require('mysql2');
 const router = express.Router();
@@ -35,6 +24,17 @@ con.connect((err) => {
 router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 
+    var changelog; // Variable, content will be read to
+
+    // read the changelog file
+    fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
+        if(err) {
+            console.log(err);
+            process.exit(1);
+        }
+        changelog = data;
+    });
+
     const htmlChangelog = marked.parse(changelog);
 
     con.query(mapsSQL, (err, result, fields) => {
@@ -51,6 +51,17 @@ router.get('/', (req, res) => {
 
 router.get('/ru', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
+
+    var changelog; // Variable, content will be read to
+
+    // read the changelog file
+    fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
+        if(err) {
+            console.log(err);
+            process.exit(1);
+        }
+        changelog = data;
+    });
 
     const htmlChangelog = marked.parse(changelog);
 
