@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 
     // read the changelog file
-    fs.readFileSync(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
+    fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
         if(err) {
             console.log(err);
             process.exit(1);
