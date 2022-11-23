@@ -24,7 +24,7 @@ con.connect((err) => {
 router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 
-    var changelog; // Variable, content will be read to
+    var tempChangelog; // Variable, content will be read to
 
     // read the changelog file
     fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
@@ -32,10 +32,11 @@ router.get('/', (req, res) => {
             console.log(err);
             process.exit(1);
         }
-        changelog = data;
+        tempChangelog = data;
     });
 
-    const htmlChangelog = marked.parse(changelog);
+    console.log(tempChangelog);
+    const htmlChangelog = marked.parse(tempChangelog);
 
     con.query(mapsSQL, (err, result, fields) => {
         if(err) throw err;
@@ -52,7 +53,7 @@ router.get('/', (req, res) => {
 router.get('/ru', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 
-    var changelog; // Variable, content will be read to
+    var tempChangelog; // Variable, content will be read to
 
     // read the changelog file
     fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
@@ -60,10 +61,10 @@ router.get('/ru', (req, res) => {
             console.log(err);
             process.exit(1);
         }
-        changelog = data;
+        tempChangelog = data;
     });
 
-    const htmlChangelog = marked.parse(changelog);
+    const htmlChangelog = marked.parse(tempChangelog);
 
     con.query(mapsSQL, (err, result, fields) => {
         if(err) throw err;
