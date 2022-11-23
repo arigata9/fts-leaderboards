@@ -1,6 +1,18 @@
 require('dotenv').config();
 const { marked } = require('marked');
-const changelog = require('../static/txt/changelog.md');
+var fs = require('fs'),
+    path = require('path');
+
+var changelog; // Variable, content will be read to
+
+// read the changelog file
+fs.readFile(path.join(__dirname, '..', 'static', 'txt', 'changelog.md'), 'utf8', function(err, data) {
+    if(err) {
+        console.log(err);
+        process.exit(1);
+    }
+    changelog = data;
+})
 
 const express = require('express');
 const mysql = require('mysql2');
