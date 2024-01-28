@@ -21,13 +21,6 @@ const mysql = require('mysql2');
 const router = express.Router();
 const locales = require('./../locales.json');
 
-/* let con = mysql.createConnection({
-    host: 'localhost',
-    user: process.env.MYSQLUSER,
-    password: process.env.MYSQLPW,
-    database: process.env.MYSQLDB
-}); */
-
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
@@ -36,11 +29,6 @@ let pool = mysql.createPool({
     database: process.env.MYSQLDB
 });
 
-/* con.connect((err) => {
-    if(err) throw err;
-    console.log('Database connection established.');
-}); */
-
 // root
 router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
@@ -48,16 +36,6 @@ router.get('/', (req, res) => {
     const htmlChangelog = marked.parse(tempChangelog);
     
     try {
-        /* con.query(mapsSQL, (err, result, fields) => {
-            if(err) throw err;
-            if(result.length == 0) return 'No maps found';
-    
-            res.render('index', {
-                en: locales.en,
-                tracks: result,
-                changelog: htmlChangelog
-            });
-        }); */
         pool.query(mapsSQL, function(error, results, fields) {
             res.render('index', {
                 en: locales.en,
@@ -76,16 +54,6 @@ router.get('/ru', (req, res) => {
 
     const htmlChangelog = marked.parse(tempChangelog);
 
-    /* con.query(mapsSQL, (err, result, fields) => {
-        if(err) throw err;
-        if(result.length == 0) return 'No maps found';
-
-        res.render('index', {
-            ru: locales.ru,
-            tracks: result,
-            changelog: htmlChangelog
-        });
-    }); */
     try {
         pool.query(mapsSQL, function(error, results, fields) {
             res.render('index', {
@@ -104,27 +72,7 @@ router.get('/tracks/:trackid', (req, res) => {
     console.log('GET /tracks: requested trackid: '+trackid);
 
     const scoreSQL = `SELECT score, vehicle_name, user_name, track_rank FROM Records WHERE track_id = ${trackid} ORDER BY track_rank;`;
-    /* con.query(scoreSQL, (err, result, fields) => {
-        if(err) throw err;
-        if(result.length == 0) console.log('No scores found');
-        
-        console.log(`result row: ${Object.entries(result)}`);
-        const iterate = (obj) => {
-            Object.keys(obj).forEach(key => {
-        
-            console.log(`key: ${key}, value: ${obj[key]}`)
-        
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
-                    iterate(obj[key])
-                }
-            })
-        }
-        console.log(iterate(result));
-
-        res.render('leaderboard', {
-            scores: result
-        });
-    }); */
+    
     try {
         pool.query(scoreSQL, function(error, results, fields) {
             const iterate = (obj) => {
