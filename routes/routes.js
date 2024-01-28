@@ -98,5 +98,9 @@ router.get('/tracks/:trackid', (req, res) => {
     
 });
 
+//The 404 Route (ALWAYS Keep this as the last route)
+router.get('*', function(req, res){
+    res.status(404).sendFile(path.join(__dirname, 'static', '404.html'));
+});
 
 module.exports = router;
