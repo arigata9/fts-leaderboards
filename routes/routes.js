@@ -38,17 +38,24 @@ router.get('/', (req, res) => {
     const mapsSQL = 'SELECT track_id, track_name FROM tracks;';
 
     const htmlChangelog = marked.parse(tempChangelog);
-
-    con.query(mapsSQL, (err, result, fields) => {
-        if(err) throw err;
-        if(result.length == 0) return 'No maps found';
-
-        res.render('index', {
-            en: locales.en,
-            tracks: result,
-            changelog: htmlChangelog
+    
+    try {
+        con.query(mapsSQL, (err, result, fields) => {
+            if(err) throw err;
+            if(result.length == 0) return 'No maps found';
+    
+            res.render('index', {
+                en: locales.en,
+                tracks: result,
+                changelog: htmlChangelog
+            });
         });
-    });
+    } catch {
+        res.sendFile(path.join(__dirname, 'static', 'error.html'));
+    } finally {
+        con.destroy();
+    }
+    
 });
 
 router.get('/ru', (req, res) => {
