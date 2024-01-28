@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
             });
         });
     } catch {
-        res.sendFile(path.join(__dirname, 'static', 'error.html'));
+        res.sendFile(path.join(__dirname, '..', 'static', 'error.html'));
     }
     
 });
@@ -63,7 +63,7 @@ router.get('/ru', (req, res) => {
             });
         });
     } catch {
-        res.sendFile(path.join(__dirname, 'static', 'error.html'));
+        res.sendFile(path.join(__dirname, '..', 'static', 'error.html'));
     }
 });
 
@@ -92,7 +92,7 @@ router.get('/tracks/:trackid', (req, res) => {
             });
         });
     } catch {
-        res.sendFile(path.join(__dirname, 'static', 'error.html'));
+        res.sendFile(path.join(__dirname, '..', 'static', 'error.html'));
     }
     
     
@@ -100,7 +100,7 @@ router.get('/tracks/:trackid', (req, res) => {
 
 //The 404 Route (ALWAYS Keep this as the last route)
 router.get('*', function(req, res){
-    res.status(404).sendFile(path.join(__dirname, 'static', '404.html'));
+    res.status(404).sendFile(path.join(__dirname, '..', 'static', '404.html'));
 });
 
 module.exports = router;
