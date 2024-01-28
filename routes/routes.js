@@ -127,8 +127,6 @@ router.get('/tracks/:trackid', (req, res) => {
     }); */
     try {
         pool.query(scoreSQL, function(error, results, fields) {
-            if(results.length == 0) console.log('No scores found');
-    
             const iterate = (obj) => {
                 Object.keys(obj).forEach(key => {
             
